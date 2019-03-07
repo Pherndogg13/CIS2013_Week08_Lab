@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <time.h>
 #include "dice.cpp"
 using namespace std;
 
@@ -15,8 +17,6 @@ class Cat {
 		}
 };
 
-
-
 int main(){
 	
 	Cat tiger;
@@ -30,7 +30,13 @@ int main(){
 	cout << "Cat 2 is created" << endl;
 	house.roar();
 	
-	
+	cout << "Create a 8 sided dice" << endl;
+	Dice d6;
+	Dice d8;
+	d8.setNumberOfSides(8);
+	cout << " Roll the dice " << endl;
+	cout << "   the 6 sided dice rolls a " << d6.roll() <<endl;
+	cout << "   the 8 sided dice rolls a " << d8.roll() << endl;
 	
 	return 0;
 }
